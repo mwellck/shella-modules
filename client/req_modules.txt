@@ -9,3 +9,6 @@ psutil
 
 # Twitter
 tweepy
+
+# Evernote
+evernote
