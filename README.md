@@ -7,9 +7,9 @@ Modules for Shella
 
 If you run into an issue or require technical support, please first look through the closed and open **[GitHub Issues](https://github.com/shella-modules/issues)**, as you may find a solution there (or some useful advice, at least).
 
-## Modules Setup Steps
+## Setup Modules
 
-You can find all the steps needed for each Modules [here](https://github.com/mwellck/shella-modules/wiki)
+You can find all the steps needed for each Modules [here](https://github.com/mwellck/shella-modules/wiki).
 
 ## Reporting Bugs
 
