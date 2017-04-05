@@ -112,10 +112,10 @@ def sendTweet(mic,api):
 
 def handle(text, mic, profile):
 	
-	consumer_key = profile['keys']["TW_CONSUMER_KEY"]
-	consumer_secret = profile['keys']["TW_CONSUMER_SECRET"]
-	access_token = profile['keys']["TW_ACCESS_TOKEN"]
-	access_token_secret = profile['keys']["TW_ACCESS_TOKEN_SECRET"]
+	consumer_key = profile['twitter']["TW_CONSUMER_KEY"]
+	consumer_secret = profile['twitter']["TW_CONSUMER_SECRET"]
+	access_token = profile['twitter']["TW_ACCESS_TOKEN"]
+	access_token_secret = profile['twitter']["TW_ACCESS_TOKEN_SECRET"]
 
 
 	auth = OAuthHandler(consumer_key, consumer_secret)

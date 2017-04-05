@@ -31,7 +31,7 @@ def handle(text, mic, profile):
 
 def writeNote(text, mic, note_store):
         note = Types.Note()						# Creates a new note
-        note.title = "Jasper Note"
+        note.title = "Shella Note"
 
         mic.say("What would you like me to write down?")
         theNote = mic.activeListen()					# Listens to the input and stores it
