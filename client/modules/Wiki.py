@@ -4,7 +4,7 @@ import re
 from urllib2 import Request, urlopen, URLError
 import json
 
-WORDS = ["WIKI", "WICKY","ARTICLE", "ARTICLES"]
+WORDS = ["WIKI", "WICKY","ARTICLE"]
 
 PRIORITY = 1
 
@@ -15,11 +15,11 @@ def handle(text, mic, profile):
 
 
 def get_wiki(text,mic):
-    mic.say("Que souhaitez vous rechercher?")
+    mic.say("What would you like to learn about?")
     # get the user voice input as string
     article_title = mic.activeListen()
     # make a call to the Wikipedia API
-    request = Request('https://fr.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro=&explaintext=&titles='+article_title)
+    request = Request('https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro=&explaintext=&titles='+article_title)
     try:
         response = urlopen(request)
         data = json.load(response)
@@ -28,7 +28,7 @@ def get_wiki(text,mic):
         final = output[output.keys()[0]]["extract"]
         mic.say(final)
     except URLError, e:
-        mic.say("Je ne peux actuellement pas accéder à Wikipédia.")
+        mic.say("Unable to reach dictionary API.")
 
 
 def isValid(text):
@@ -36,9 +36,8 @@ def isValid(text):
     # Add 'Wicky' because the STT engine recognizes it quite often
     wicky= bool(re.search(r'\bwicky\b',text, re.IGNORECASE))
     article= bool(re.search(r'\barticle\b',text, re.IGNORECASE))
-    articles= bool(re.search(r'\barticles\b',text, re.IGNORECASE))
 
-    if wicky or wiki or article or articles:
+    if wicky or wiki or article:
         return True
     else:
         return False
