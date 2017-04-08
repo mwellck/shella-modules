@@ -10,7 +10,8 @@ import sys
 import time
 import re
 
-# Written by Jason van Eunen - jasonvaneunen.com
+# Written by Jason van Eunen
+# Optimized by Malo Wellbrock
 
 
 WORDS = ["NOTE"]
@@ -20,7 +21,7 @@ PRIORITY = 1
 
 def handle(text, mic, profile):
 
-        auth_token = profile["EVERNOTE_TOKEN"]
+        auth_token = profile['evernote']['TOKEN']
 
         client = EvernoteClient(token=auth_token, sandbox=False)
         user_store = client.get_user_store()

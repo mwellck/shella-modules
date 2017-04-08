@@ -14,11 +14,12 @@ from oauth2client.tools import *
 
 
 # Written by Marc Poul Joseph Laventure
+# Optimized by Malo Wellbrock
 
 FLAGS = gflags.FLAGS
 WORDS = [ "Calendar", "Events", "Check", "My" ]
-client_id = 'xxxxxxxx.apps.googleusercontent.com'
-client_secret = 'xxxxxxxxxxxxxx'
+client_id = profile['google']['client_id']
+client_secret = profile['google']['client_secret']
 
 monthDict = {'January': '01', 
 		'February': '02', 
