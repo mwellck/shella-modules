@@ -1,7 +1,9 @@
 Shella-Modules
 =============
 
-Modules for Shella
+Modules for Shella not already implemented in Shella Client.
+
+You can always find implemented modules in "old".
 
 ## Support
 

@@ -1,14 +1,2 @@
-# IMDb Movies
-imdbpy>=5.0
-
-# Google Calendar
-httplib2
-
-# Status
-psutil
-
-# Twitter
-tweepy
-
 # Evernote
 evernote
